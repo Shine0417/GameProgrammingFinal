@@ -24,6 +24,7 @@ public class PlayerRunState : PlayerBaseState
             }
             if (player.VelocityY > maxVelocityY)
             {
+                player.animator.SetBool("isFalling", false);
                 player.VelocityY -= gravity * Time.deltaTime;
             }
         }
